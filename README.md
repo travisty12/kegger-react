@@ -6,10 +6,14 @@
 * The planned structure of components is as follows:
 * ![component tree](src/assets/images/ComponentTree.jpg)
 
+# Development Notes
+* React is being stubborn, creating lots of empty space despite my attempts to remove margin and padding.
+* I'm unsure how I'll implement a login capability next week. I know I'll need to use state, which means I'll have to turn it into a classical program, but that means I can't use styling with consts.
 
 ## Description (current)
 * This is a React project, mimicking a previous Angular project.
 * The website is a mock page for a Taproom. It is currently static, but I plan on making it more dynamic and interactive.
+* React is certainly more forgiving than Angular, in terms of how easy it is to make components. However, I find myself making a LOT more components than I did with Angular.
 
 ### Setup/Installation Requirements
 * Open your preferred browser
