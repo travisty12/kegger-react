@@ -18,7 +18,8 @@ function Keg(props){
   }
 
   const TextStyle = {
-    margin: "0"
+    margin: "0",
+    color: "rgba(30,30,30, 1)"
   }
 
   return (
