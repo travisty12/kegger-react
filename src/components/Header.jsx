@@ -8,10 +8,16 @@ function Header(){
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    height: "100px",
+    width: "100%",
+    backgroundColor: "lightblue",
+    color: "yellow",
+    position: "fixed",
+    top: "0"
   }
   const LogoStyle = {
-    width: "10vw"
+    height: "80px"
   }
   return (
     <div style={HeaderStyle}>

@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 function Keg(props){
 
   const KegStyle = {
-    // width: "400px",
+    width: "400px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom: "40px"
   }
 
   const InfoStyle = {
@@ -16,15 +17,19 @@ function Keg(props){
     flexDirection: "column"
   }
 
+  const TextStyle = {
+    margin: "0"
+  }
+
   return (
     <div style={KegStyle}>
       <h1>{props.name}</h1>
       <div style={InfoStyle}>
-        <h3>{props.brand} Brewery</h3>
-        <h4>${props.price} / pint</h4>
-        <p>{props.abv}% abv</p>
-        <p>{props.ibu} IBUs</p>
-        <p>{props.volume} pints remaining</p>
+        <h3 style={TextStyle}>{props.brand} Brewery</h3>
+        <h4 style={TextStyle}>${props.price} / pint</h4>
+        <p style={TextStyle}>{props.abv}% abv</p>
+        <p style={TextStyle}>{props.ibu} IBUs</p>
+        <p style={TextStyle}>{props.volume} pints remaining</p>
       </div>
     </div>
   );

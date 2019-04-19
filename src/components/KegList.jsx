@@ -46,8 +46,15 @@ function KegList(){
       volume: 124
     }
   ];
+  const KegListStyle = {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginTop: "100px"
+  }
   return (
-    <div>
+    <div style={KegListStyle}>
       {kegList.map((keg, index) =>
         <Keg name={keg.name}
           brand={keg.brand}
