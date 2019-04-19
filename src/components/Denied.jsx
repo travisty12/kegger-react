@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function Denied(props){
+function Denied(){
   return (
     <div>
       <h1>Denied Working</h1>
@@ -11,8 +11,5 @@ function Denied(props){
   );
 }
 
-Denied.propTypes = {
-  location: PropTypes.object
-};
 
 export default Denied;
