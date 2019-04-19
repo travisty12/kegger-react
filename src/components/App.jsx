@@ -6,10 +6,15 @@ import Footer from './Footer';
 import Landing from './Landing';
 import KegList from './KegList';
 import Denied from './Denied';
+import bg from '../assets/images/Sand-bg.png';
 
 function App(){
+  const GlobalStyle = {
+    backgroundImage: "url(" + bg + ")",
+    height: "100%"
+  };
   return (
-    <div>
+    <div style={GlobalStyle}>
       <Header/>
       <Switch>
         <Route exact path='/' component={Landing} />
