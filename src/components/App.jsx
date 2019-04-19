@@ -11,6 +11,7 @@ import bg from '../assets/images/Sand-bg.png';
 function App(){
   const GlobalStyle = {
     backgroundImage: "url(" + bg + ")",
+    backgroundSize: "cover",
     height: "100%"
   };
   return (
