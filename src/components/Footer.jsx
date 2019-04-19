@@ -18,10 +18,15 @@ function Footer(){
     alignItems: "center"
   };
 
+  const AnchorStyle = {
+    textDecoration: "none",
+    color: "black"
+  }
+
   return (
     <div style={FooterStyle}>
       <h1>Copyright 2019, Travis Toal</h1>
-      <a href="https://www.github.com/travisty12">View more projects</a>
+      <p><a href="https://www.github.com/travisty12" style={AnchorStyle}>View more projects</a></p>
     </div>
   );
 }
