@@ -9,6 +9,7 @@
 # Development Notes
 * React is being stubborn, creating lots of empty space despite my attempts to remove margin and padding.
 * I'm unsure how I'll implement a login capability next week. I know I'll need to use state, which means I'll have to turn it into a classical program, but that means I can't use styling with consts.
+* Styling is more complicated than it is in Angular. More specific, and easier to target components, but it requiring its own const per element adds up. Next week I want to implement the styled-components module, that should make things more concise.
 
 ## Description (current)
 * This is a React project, mimicking a previous Angular project.
