@@ -51,7 +51,8 @@ function KegList(){
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "100px"
+    marginTop: "100px",
+    marginBottom: "60px"
   }
   return (
     <div style={KegListStyle}>
