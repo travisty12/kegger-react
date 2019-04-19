@@ -2,8 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import spitoon from '../assets/images/salty-spitoon.png';
 import Keg from './Keg';
+import EditKeg from './EditKeg';
 
 function KegList(){
+
+  function editKeg(keg) {
+    return (
+      <EditKeg keg={keg}/>
+    )
+  }
+
   const kegList = [
     {
       name: 'Blushing Monk',
@@ -63,7 +71,7 @@ function KegList(){
           abv={keg.abv}
           ibu={keg.ibu}
           volume={keg.volume}
-          key={index} />
+          key={index} onClick={editKeg(keg)} />
       )}
     </div>
   );
