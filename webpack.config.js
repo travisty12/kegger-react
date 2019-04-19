@@ -67,6 +67,17 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      template:'template.ejs',
+      appMountId: 'react-app-root',
+      title: 'Kegger - React',
+      filename: resolve(__dirname, 'build', 'index.html'),
+    })
+  ]
 
 };
