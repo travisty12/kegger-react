@@ -49,12 +49,12 @@ function KegList(){
   return (
     <div>
       {kegList.map((keg, index) =>
-        <Keg name={keg.name},
-          brand={keg.brand},
-          price={keg.price},
-          abv={keg.abv},
-          ibu={keg.ibu},
-          volume={keg.volume},
+        <Keg name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          abv={keg.abv}
+          ibu={keg.ibu}
+          volume={keg.volume}
           key={index} />
       )}
     </div>

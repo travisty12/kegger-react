@@ -4,8 +4,14 @@ import PropTypes from 'prop-types';
 function Keg(props){
   return (
     <div>
-      <img src={spitoon} alt="" />
-      <h1>Keg Working</h1>
+      <h1>{props.name}</h1>
+      <div>
+        <h3>{props.brand} Brewery</h3>
+        <h4>{props.price} / pint</h4>
+        <p>{props.abv}% abv</p>
+        <p>{props.ibu} IBUs</p>
+        <p>{props.volume} pints remaining</p>
+      </div>
     </div>
   );
 }

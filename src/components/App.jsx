@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Landing from './Landing';
 import KegList from './KegList';
+import Denied from './Denied';
 
 function App(){
   return (
@@ -13,6 +14,7 @@ function App(){
       <Switch>
         <Route exact path='/' component={Landing} />
         <Route path='/kegs' component={KegList} />
+        <Route path='/denied' component={Denied} />
         <Route component={Error404} />
       </Switch>
       <Footer/>

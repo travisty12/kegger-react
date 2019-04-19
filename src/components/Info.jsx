@@ -1,10 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function Info(){
   return (
     <div>
-      <h1>Info Working</h1>
+      <p>Kegger Taproom was created in 2019</p>
+
+      <p>We showcase different beers from The Growler Guys to demonstrate site-buiding with React.</p>
     </div>
   );
 }
