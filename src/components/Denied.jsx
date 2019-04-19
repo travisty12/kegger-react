@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 
 function Denied(){
   const DeniedStyle = {
-    height: "100vh"
+    marginTop: "100px",
+    height: "calc(100vh - 160px)",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
   }
   return (
     <div style={DeniedStyle}>

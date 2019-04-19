@@ -9,7 +9,7 @@ function Keg(props){
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginBottom: "40px"
+    margin: "0 20px 40px 20px"
   }
 
   const InfoStyle = {
@@ -19,12 +19,13 @@ function Keg(props){
 
   const TextStyle = {
     margin: "0",
-    color: "rgba(30,30,30, 1)"
+    color: "rgba(30,30,30, 1)",
+    fontSize: "1rem"
   }
 
   return (
     <div style={KegStyle}>
-      <h1>{props.name}</h1>
+      <h1 style={TextStyle}>{props.name}</h1>
       <div style={InfoStyle}>
         <h3 style={TextStyle}>{props.brand} Brewery</h3>
         <h4 style={TextStyle}>${props.price} / pint</h4>

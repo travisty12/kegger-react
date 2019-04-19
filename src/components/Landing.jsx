@@ -4,7 +4,13 @@ import Age from './Age';
 
 function Landing(){
   const LandingStyle = {
-    height: "100vh"
+    height: "calc(100vh - 160px)",
+    marginTop: "100px",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around"
+
   }
   return (
     <div style={LandingStyle}>

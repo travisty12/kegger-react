@@ -6,12 +6,12 @@ import Footer from './Footer';
 import Landing from './Landing';
 import KegList from './KegList';
 import Denied from './Denied';
-import bg from '../assets/images/Sand-bg.png';
+import bg from '../assets/images/Sand-bg.svg';
 
 function App(){
   const GlobalStyle = {
     backgroundImage: "url(" + bg + ")",
-    backgroundSize: "cover",
+    // backgroundSize: "cover",
     height: "100%"
   };
   return (
