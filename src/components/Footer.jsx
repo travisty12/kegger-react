@@ -23,9 +23,13 @@ function Footer(){
     color: "black"
   }
 
+  const CopyrightStyle = {
+    fontSize: "1rem"
+  }
+
   return (
     <div style={FooterStyle}>
-      <h1>Copyright 2019, Travis Toal</h1>
+      <h1 style={CopyrightStyle}>Copyright 2019, Travis Toal</h1>
       <p><a href="https://www.github.com/travisty12" style={AnchorStyle}>View more projects</a></p>
     </div>
   );
