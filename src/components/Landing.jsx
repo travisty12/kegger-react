@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import logo from '../assets/images/Logo.png';
 
 function Landing(){
   return (
     <div>
-      <h1>Landing Working</h1>
+      <img src={logo} alt="logo" />
     </div>
   );
 }
