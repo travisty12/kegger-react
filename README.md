@@ -11,11 +11,10 @@
 # Development Notes
 * React is being stubborn, creating lots of empty space despite my attempts to remove margin and padding.
 * I'm unsure how I'll implement a login capability next week. I know I'll need to use state, which means I'll have to turn it into a classical program, but that means I can't use styling with consts.
-* Styling is more complicated than it is in Angular. More specific, and easier to target components, but it requiring its own const per element adds up. Next week I want to implement the styled-components module, that should make things more concise.
+* Ended up making an AddKeg component outside of my component tree diagram for putting in a new keg.
 
 ## Description (current)
 * This is a React project, mimicking a previous Angular project.
-* The website is a mock page for a Taproom. It is currently static, but I plan on making it more dynamic and interactive.
 * React is certainly more forgiving than Angular, in terms of how easy it is to make components. However, I find myself making a LOT more components than I did with Angular.
 
 ### Setup/Installation Requirements
@@ -31,7 +30,8 @@
 *  This will result in running on a local host
 
 ## Known Bugs
-_As of April 19th 2019 there are no known bugs_
+_There is constant blank space around the sides, despite setting components to 100vw width - not sure why_
+_Mobile view is completely flawed. Currently the biggest point of focus for future feature fixing._
 
 
 ## List of Technologies Resources
