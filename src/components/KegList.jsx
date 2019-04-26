@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Keg from './Keg';
 import Denied from './Denied';
+import AddKeg from './AddKeg';
 
 class KegList extends React.Component{
 
@@ -85,7 +86,7 @@ class KegList extends React.Component{
   toggleAdd() {
     const newState = {...this.state};
     newState.addKeg = !newState.addKeg;
-    this.setState({kegList: newState});
+    this.setState({addKeg: newState});
   }
 
   handleAddKeg(newKeg) {
@@ -121,12 +122,12 @@ class KegList extends React.Component{
     };
     let Visible = null;
     let AddComponent = null;
-    // if (this.state.addKeg) {
-    //   AddComponent = <AddKeg toggleAdd={this.toggleAdd} onAddKeg={this.handleAddKeg} />;
-    // } else {
-    //   AddComponent = <button onClick={this.toggleAdd} style={ButtonStyle}>Add Keg</button>;
-    //
-    // }
+    if (this.state.addKeg) {
+      AddComponent = <AddKeg toggleAdd={this.toggleAdd} onAddKeg={this.handleAddKeg} />;
+    } else {
+      AddComponent = <button onClick={this.toggleAdd} style={ButtonStyle}>Add Keg</button>;
+
+    }
     if (this.props.accessGranted) {
       Visible = <div style={KegListStyle}>{this.state.kegList.map((keg, index) => <Keg name={keg.name}
             brand={keg.brand}

@@ -49,12 +49,12 @@ function AddKeg(props){
 
   return (
     <form style={FormStyle} onSubmit={addNewKeg}>
-      <input style={InputStyle} placeholder={props.name} ref={(input) => {_name = input;}} />
-      <input style={InputStyle} placeholder={props.brand + ' Brewery'} ref={(input) => {_brand = input;}} />
-      <input style={InputStyle} placeholder={'$' + props.price + ' / pint'} ref={(input) => {_price = input;}} />
-      <input style={InputStyle} placeholder={props.abv + '% abv'} ref={(input) => {_abv = input;}} />
-      <input style={InputStyle} placeholder={props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} />
-      <input style={InputStyle} placeholder={props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} />
+      <input style={InputStyle} placeholder='Name' ref={(input) => {_name = input;}} />
+      <input style={InputStyle} placeholder='Brewery' ref={(input) => {_brand = input;}} />
+      <input style={InputStyle} placeholder='Price Per Pint' ref={(input) => {_price = input;}} />
+      <input style={InputStyle} placeholder='ABV' ref={(input) => {_abv = input;}} />
+      <input style={InputStyle} placeholder='IBUs' ref={(input) => {_ibu = input;}} />
+      <input style={InputStyle} placeholder='Volume' ref={(input) => {_volume = input;}} />
       <button style={ButtonStyle} type='submit'>Submit</button>
     </form>
   );
