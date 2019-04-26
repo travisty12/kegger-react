@@ -11,15 +11,16 @@ function EditKeg(props){
 
   function submitNewKeg(event) {
     event.preventDefault();
-    props.onEditKeg(props.index, {name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, ibu: _ibu.value, volume: _volume.value});
+    props.onEditKeg(props.index, {name: _name.value, brand: _brand.value, price: parseInt(_price.value), abv: parseInt(_abv.value), ibu: parseInt(_ibu.value), volume: parseInt(_volume.value)});
     _name.value = '';
     _brand.value = '';
     _price.value = '';
     _abv.value = '';
     _ibu.value = '';
     _volume.value = '';
+    props.onSubmitToggle();
   }
-  
+
   return (
     <form onSubmit={submitNewKeg}>
       <input placeholder={props.name} ref={(input) => {_name = input;}} />
@@ -33,5 +34,14 @@ function EditKeg(props){
   );
 }
 
+EditKeg.propTypes = {
+  onEditKeg: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  abv: PropTypes.number.isRequired,
+  ibu: PropTypes.number.isRequired,
+  volume: PropTypes.number.isRequired,
+}
 
 export default EditKeg;

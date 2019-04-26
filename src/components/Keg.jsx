@@ -62,7 +62,7 @@ class Keg extends React.Component {
         price={this.props.price}
         abv={this.props.abv}
         ibu={this.props.ibu}
-        volume={this.props.volume} index={this.props.index} onEditKeg={this.props.onEditKeg} /></div>
+        volume={this.props.volume} index={this.props.index} onSubmitToggle={this.toggleEdit} onEditKeg={this.props.onEditKeg} /></div>
       // KegView = <div style={InfoStyle}><form onSubmit={this.submitNewKeg}><input placeholder={this.props.name} ref={(input) => {_name = input;}} /><input placeholder={this.props.brand + ' Brewery'} ref={(input) => {_brand = input;}} /><input placeholder={'$' + this.props.price + ' / pint'} ref={(input) => {_price = input;}} /><input placeholder={this.props.abv + '% abv'} ref={(input) => {_abv = input;}} /><input placeholder={this.props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} /><input placeholder={this.props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} /><button type='submit'>Submit</button></form></div>
 
     } else {
