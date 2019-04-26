@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import spitoon from '../assets/images/salty-spitoon.png';
 import Keg from './Keg';
 import EditKeg from './EditKeg';
+import Denied from './Denied';
 
 class KegList extends React.Component{
 
@@ -70,8 +71,10 @@ class KegList extends React.Component{
       marginTop: '100px',
       marginBottom: '60px'
     };
-    return (
-      <div style={KegListStyle}>
+    console.log(this.props.accessGranted);
+    let Visible = null;
+    if (this.props.accessGranted) {
+      Visible = <div style={KegListStyle}>
         {this.state.kegList.map((keg, index) =>
           <Keg name={keg.name}
             brand={keg.brand}
@@ -84,6 +87,13 @@ class KegList extends React.Component{
             onEditKeg={this.handleEditKeg}
             key={index}/>
         )}
+      </div>
+    } else {
+      Visible = <Denied />
+    }
+    return (
+      <div>
+        {Visible}
       </div>
     );
   }

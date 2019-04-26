@@ -17,7 +17,7 @@ function Denied(){
   }
   return (
     <div style={DeniedStyle}>
-      <h1>Unfortunately, you must be 21 or over view this site.</h1>
+      <h1>Unfortunately, you cannot view this page.</h1>
       <h3>Would you like to return <Link to='/' style={AnchorStyle}>home</Link> instead?</h3>
     </div>
   );

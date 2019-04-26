@@ -2,7 +2,7 @@ import React from 'react';
 import Info from './Info';
 import Age from './Age';
 
-function Landing(){
+function Landing(props){
   const LandingStyle = {
     height: 'calc(100vh - 160px)',
     marginTop: '100px',
@@ -15,7 +15,7 @@ function Landing(){
   return (
     <div style={LandingStyle}>
       <Info />
-      <Age />
+      <Age onAccess={props.onAccess} />
     </div>
   );
 }

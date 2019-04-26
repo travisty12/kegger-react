@@ -13,7 +13,7 @@ function Login(props){
   if (location.hash == '#/kegs') {
     LoginShown = <h1 style={LoginStyle} onClick={props.onLogin}>Edit</h1>
   } else {
-    LoginShown = null;
+    LoginShown = <h1><Link to='/' style={LoginStyle}>Enter</Link></h1>;
   }
 
   return (
