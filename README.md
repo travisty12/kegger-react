@@ -5,6 +5,8 @@
 ## Planning
 * The planned structure of components is as follows:
 * ![component tree](src/assets/images/ComponentTree.jpg)
+* The updated component tree, including state, is as follows:
+* ![new component tree](src/assets/images/NewComponentTree.jpg)
 
 # Development Notes
 * React is being stubborn, creating lots of empty space despite my attempts to remove margin and padding.
