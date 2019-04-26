@@ -36,7 +36,7 @@ class App extends React.Component {
   render() {
     const GlobalStyle = {
       backgroundImage: 'url(' + bg + ')',
-      height: '100%'
+      height: 'calc(100vh - 160px)'
     };
     return (
       <div style={GlobalStyle}>
