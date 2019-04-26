@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EditKeg from './EditKeg';
 
 class Keg extends React.Component {
 
@@ -9,7 +10,7 @@ class Keg extends React.Component {
       editMode: false
     }
     this.toggleEdit = this.toggleEdit.bind(this);
-    this.submitNewKeg = this.submitNewKeg.bind(this);
+    // this.submitNewKeg = this.submitNewKeg.bind(this);
   }
 
   toggleEdit() {
@@ -17,18 +18,6 @@ class Keg extends React.Component {
     newState.editMode = !newState.editMode;
     this.setState({editMode: newState.editMode});
   }
-
-  submitNewKeg(event) {
-    event.preventDefault();
-    this.props.onEditKeg(this.props.index, {name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, ibu: _ibu.value, volume: _volume.value});
-    _name.value = '';
-    _brand.value = '';
-    _price.value = '';
-    _abv.value = '';
-    _ibu.value = '';
-    _volume.value = '';
-  }
-
 
   render() {
     const KegStyle = {
@@ -59,16 +48,22 @@ class Keg extends React.Component {
       fontSize: '2rem'
     };
     let KegView = null;
-    let EditOptions = null;
     let _name = null;
     let _brand = null;
     let _price = null;
     let _abv = null;
     let _ibu = null;
     let _volume = null;
+    let EditOptions = null;
     if (this.state.editMode) {
       EditOptions = <div><button>Sell 1 pint</button><button>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
-      KegView = <div style={InfoStyle}><form onSubmit={this.submitNewKeg}><input placeholder={this.props.name} ref={(input) => {_name = input;}} /><input placeholder={this.props.brand + ' Brewery'} ref={(input) => {_brand = input;}} /><input placeholder={'$' + this.props.price + ' / pint'} ref={(input) => {_price = input;}} /><input placeholder={this.props.abv + '% abv'} ref={(input) => {_abv = input;}} /><input placeholder={this.props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} /><input placeholder={this.props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} /><button type='submit'>Submit</button></form></div>
+      KegView = <div style={InfoStyle}><EditKeg name={this.props.name}
+        brand={this.props.brand}
+        price={this.props.price}
+        abv={this.props.abv}
+        ibu={this.props.ibu}
+        volume={this.props.volume} index={this.props.index} onEditKeg={this.props.onEditKeg} /></div>
+      // KegView = <div style={InfoStyle}><form onSubmit={this.submitNewKeg}><input placeholder={this.props.name} ref={(input) => {_name = input;}} /><input placeholder={this.props.brand + ' Brewery'} ref={(input) => {_brand = input;}} /><input placeholder={'$' + this.props.price + ' / pint'} ref={(input) => {_price = input;}} /><input placeholder={this.props.abv + '% abv'} ref={(input) => {_abv = input;}} /><input placeholder={this.props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} /><input placeholder={this.props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} /><button type='submit'>Submit</button></form></div>
 
     } else {
       EditOptions = <div><button onClick={this.toggleEdit}>Open edit mode</button></div>;
