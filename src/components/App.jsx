@@ -19,9 +19,8 @@ class App extends React.Component {
 
   handleLogin() {
     const newState = {...this.state};
-    newState.loginEnabled = true;
+    newState.loginEnabled = !this.state.loginEnabled;
     this.setState({loginEnabled: newState.loginEnabled});
-    console.log(this.state);
   }
 
   render() {

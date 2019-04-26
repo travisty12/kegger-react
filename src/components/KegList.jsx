@@ -70,7 +70,6 @@ class KegList extends React.Component{
       marginTop: '100px',
       marginBottom: '60px'
     };
-    console.log(this.props.loginEnabled);
     return (
       <div style={KegListStyle}>
         {this.state.kegList.map((keg, index) =>
