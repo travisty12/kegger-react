@@ -49,18 +49,20 @@ class KegList extends React.Component{
           ibu: 10,
           volume: 124
         }
-      ]
+      ],
+      addKeg: false
     };
     this.handleEditKeg = this.handleEditKeg.bind(this);
     this.handleSellPint = this.handleSellPint.bind(this);
     this.handleFillKeg = this.handleFillKeg.bind(this);
+    this.handleAddKeg = this.handleAddKeg.bind(this);
+    this.toggleAdd = this.toggleAdd.bind(this);
   }
 
   handleEditKeg(index, newKeg) {
     const newState = {...this.state}.kegList;
     for (let key in newKeg) {
       if (newKeg[key]) {
-        console.log(newKeg[key]);
         newState[index][key] = newKeg[key];
       }
 
@@ -77,6 +79,18 @@ class KegList extends React.Component{
   handleFillKeg(index) {
     const newState = {...this.state}.kegList;
     newState[index].volume = 124;
+    this.setState({kegList: newState});
+  }
+
+  toggleAdd() {
+    const newState = {...this.state};
+    newState.addKeg = !newState.addKeg;
+    this.setState({kegList: newState});
+  }
+
+  handleAddKeg(newKeg) {
+    const newState = {...this.state}.kegList;
+    newState.push(newKeg);
     this.setState({kegList: newState});
   }
 
@@ -106,10 +120,15 @@ class KegList extends React.Component{
       margin: '10px'
     };
     let Visible = null;
+    let AddComponent = null;
+    // if (this.state.addKeg) {
+    //   AddComponent = <AddKeg toggleAdd={this.toggleAdd} onAddKeg={this.handleAddKeg} />;
+    // } else {
+    //   AddComponent = <button onClick={this.toggleAdd} style={ButtonStyle}>Add Keg</button>;
+    //
+    // }
     if (this.props.accessGranted) {
-      Visible = <div style={KegListStyle}>
-        {this.state.kegList.map((keg, index) =>
-          <Keg name={keg.name}
+      Visible = <div style={KegListStyle}>{this.state.kegList.map((keg, index) => <Keg name={keg.name}
             brand={keg.brand}
             price={keg.price}
             abv={keg.abv}
@@ -120,10 +139,7 @@ class KegList extends React.Component{
             onSellPint={this.handleSellPint}
             onFillKeg={this.handleFillKeg}
             onEditKeg={this.handleEditKeg}
-            key={index}/>
-        )}
-        <button style={ButtonStyle}>Add Keg</button>
-      </div>;
+            key={index}/>)}{AddComponent}</div>;
     } else {
       Visible = <Denied />;
     }
