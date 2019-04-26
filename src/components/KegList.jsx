@@ -69,7 +69,8 @@ class KegList extends React.Component{
       alignItems: 'center',
       marginTop: '100px',
       marginBottom: '60px'
-    }
+    };
+    console.log(this.props.loginEnabled);
     return (
       <div style={KegListStyle}>
         {this.state.kegList.map((keg, index) =>
@@ -80,6 +81,7 @@ class KegList extends React.Component{
             ibu={keg.ibu}
             volume={keg.volume}
             index={index}
+            loginEnabled={this.props.loginEnabled}
             onEditKeg={this.handleEditKeg}
             key={index}/>
         )}

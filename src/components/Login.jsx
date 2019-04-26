@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Login(){
+function Login(props){
 
   const LoginStyle = {
     textDecoration: 'none',
-    color: 'yellow'
+    color: 'yellow',
+    cursor: 'pointer'
   }
 
   return (
     <div>
-      <h1><Link to='/' style={LoginStyle}>Login</Link></h1>
+      <h1 style={LoginStyle} onClick={props.onLogin}>Login</h1>
     </div>
   );
 }

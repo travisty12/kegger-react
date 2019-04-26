@@ -3,7 +3,7 @@ import Nav from './Nav';
 import Login from './Login';
 import logo from '../assets/images/Logo.png';
 
-function Header(){
+function Header(props){
   const HeaderStyle = {
     display: 'flex',
     flexDirection: 'row',
@@ -23,7 +23,7 @@ function Header(){
     <div style={HeaderStyle}>
       <Nav />
       <img src={logo} style={LogoStyle} alt='logo' />
-      <Login />
+      <Login onLogin={props.onLogin} />
     </div>
   );
 }
