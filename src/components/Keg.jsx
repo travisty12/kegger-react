@@ -17,6 +17,12 @@ class Keg extends React.Component {
     this.setState({editMode: newState.editMode});
   }
 
+  submitNewKeg(event) {
+    event.preventDefault();
+    this.props.onEditKeg();
+  }
+
+
   render() {
     const KegStyle = {
       maxWidth: '600px',
@@ -49,6 +55,7 @@ class Keg extends React.Component {
     let EditOptions = null;
     if (this.state.editMode) {
       EditOptions = <div><button>Sell 1 pint</button><button>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
+      KegView = <div style={InfoStyle}><form onSubmit={this.submitNewKeg}><input placeholder={this.props.name} ref={(input) => {_name = input;}} /><input placeholder={this.props.brand + ' Brewery'} ref={(input) => {_brand = input;}} /><input placeholder={'$' + this.props.price + ' / pint'} ref={(input) => {_price = input;}} /><input placeholder={this.props.abv + '% abv'} ref={(input) => {_abv = input;}} /><input placeholder={this.props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} /><input placeholder={this.props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} /></form></div>
 
     } else {
       EditOptions = <div><button onClick={this.toggleEdit}>Open edit mode</button></div>;
