@@ -8,8 +8,7 @@ function Footer(){
     height: '60px',
     position: 'fixed',
     bottom: '0',
-    backgroundColor: 'lightblue',
-    color: 'yellow',
+    backgroundColor: 'rgb(50,50,50)',
     margin: '0',
     padding: '0',
     display: 'flex',
@@ -20,11 +19,13 @@ function Footer(){
 
   const AnchorStyle = {
     textDecoration: 'none',
-    color: 'black'
+    color: 'white',
   }
 
   const CopyrightStyle = {
-    fontSize: '1rem'
+    fontSize: '1rem',
+    color: 'white'
+
   }
 
   return (

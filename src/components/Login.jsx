@@ -5,7 +5,7 @@ function Login(props){
 
   const LoginStyle = {
     textDecoration: 'none',
-    color: 'yellow',
+    color: 'white',
     cursor: 'pointer'
   }
 

@@ -12,12 +12,14 @@ function Landing(props){
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    width: '95vw',
+    width: '800vw',
     maxWidth: '600px',
     backgroundColor: 'rgba(0,0,0,0.3)',
     border: '2px solid gold',
     borderRadius: '20px',
-    padding: '20px'
+    padding: '20px',
+    marginBottom:'30px',
+    fontSize: '0.75rem'
   };
   return (
     <div style={LandingStyle}>

@@ -11,8 +11,8 @@ function Header(props){
     alignItems: 'center',
     height: '100px',
     width: '100%',
-    backgroundColor: 'lightblue',
-    color: 'yellow',
+    backgroundColor: 'rgb(50,50,50)',
+    color: 'white',
     position: 'fixed',
     top: '0'
   }

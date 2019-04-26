@@ -10,13 +10,28 @@ class Keg extends React.Component {
       editMode: false
     }
     this.toggleEdit = this.toggleEdit.bind(this);
-    // this.submitNewKeg = this.submitNewKeg.bind(this);
+    this.sellPint = this.sellPint.bind(this);
+    this.fillKeg = this.fillKeg.bind(this);
   }
 
   toggleEdit() {
     const newState = {...this.state};
     newState.editMode = !newState.editMode;
     this.setState({editMode: newState.editMode});
+  }
+
+  sellPint() {
+    const newState = {...this.state};
+    newState.editMode = !newState.editMode;
+    this.setState({editMode: newState.editMode});
+    this.props.onSellPint(this.props.index);
+  }
+
+  fillKeg() {
+    const newState = {...this.state};
+    newState.editMode = !newState.editMode;
+    this.setState({editMode: newState.editMode});
+    this.props.onFillKeg(this.props.index);
   }
 
   render() {
@@ -56,7 +71,7 @@ class Keg extends React.Component {
     let _volume = null;
     let EditOptions = null;
     if (this.state.editMode) {
-      EditOptions = <div><button>Sell 1 pint</button><button>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
+      EditOptions = <div><button onClick={() => {this.sellPint}}>Sell 1 pint</button><button onClick={() => {this.fillKeg}}>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
       KegView = <div style={InfoStyle}><EditKeg name={this.props.name}
         brand={this.props.brand}
         price={this.props.price}
@@ -94,6 +109,9 @@ Keg.propTypes = {
   abv: PropTypes.number.isRequired,
   ibu: PropTypes.number.isRequired,
   volume: PropTypes.number.isRequired,
+  onSellPint: PropTypes.func.isRequired,
+  onFillKeg: PropTypes.func.isRequired,
+  onEditKeg: PropTypes.func.isRequired,
 };
 
 export default Keg;

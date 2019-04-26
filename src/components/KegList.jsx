@@ -54,11 +54,26 @@ class KegList extends React.Component{
       ]
     }
     this.handleEditKeg = this.handleEditKeg.bind(this);
+    this.handleSellPint = this.handleSellPint.bind(this);
+    this.handleFillKeg = this.handleFillKeg.bind(this);
   }
 
   handleEditKeg(index, newKeg) {
     const newState = {...this.state}.kegList;
     newState[index] = newKeg;
+    this.setState({kegList: newState});
+  }
+
+  handleSellPint(index) {
+    console.log("in");
+    const newState={...this.state}.kegList;
+    newState[index].volume -= 1;
+    this.setState({kegList: newState});
+  }
+
+  handleFillKeg(index) {
+    const newState = {...this.state}.kegList;
+    newState[index].volume = 124;
     this.setState({kegList: newState});
   }
 
@@ -69,7 +84,7 @@ class KegList extends React.Component{
       flexDirection: 'column',
       alignItems: 'center',
       marginTop: '100px',
-      marginBottom: '60px',
+      marginBottom: '260px',
       height: '100%',
       maxWidth: '600px',
       backgroundColor: 'rgba(0,0,0,0.3)',
@@ -77,7 +92,6 @@ class KegList extends React.Component{
       borderRadius: '20px',
       padding: '20px'
     };
-    console.log(this.props.accessGranted);
     let Visible = null;
     if (this.props.accessGranted) {
       Visible = <div style={KegListStyle}>
@@ -90,9 +104,12 @@ class KegList extends React.Component{
             volume={keg.volume}
             index={index}
             loginEnabled={this.props.loginEnabled}
+            onSellPint={this.handleSellPint}
+            onFillKeg={this.handleFillKeg}
             onEditKeg={this.handleEditKeg}
             key={index}/>
         )}
+        <button>Add Keg</button>
       </div>
     } else {
       Visible = <Denied />
