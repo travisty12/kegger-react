@@ -16,7 +16,8 @@ function Denied(){
     border: '2px solid gold',
     borderRadius: '20px',
     padding: '20px',
-    fontSize: '1rem'
+    fontSize: '1rem',
+    boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)'
   };
   const AnchorStyle = {
     textDecoration: 'none',

@@ -47,14 +47,18 @@ class Keg extends React.Component {
       padding: '10px',
       margin: '10px',
       borderRadius: '20px',
-      height: '150px'
+      height: '150px',
+      boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)'
     };
 
     const InfoStyle = {
       display: 'flex',
       flexDirection: 'column',
       textAlign: 'center',
-      height: '100%'
+      backgroundColor: 'rgba(0,0,0,0.3)',
+      padding: '20px',
+      borderRadius: '10px',
+      boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)'
     };
 
     const TextStyle = {

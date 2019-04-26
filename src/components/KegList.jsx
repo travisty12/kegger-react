@@ -34,7 +34,7 @@ class KegList extends React.Component{
           volume: 124
         },
         {
-          name: 'Cali Creamin',
+          name: 'Cali Screamin',
           brand: 'Mother Earth',
           price: 4,
           abv: 5,
@@ -93,7 +93,17 @@ class KegList extends React.Component{
       backgroundColor: 'rgba(0,0,0,0.3)',
       border: '2px solid gold',
       borderRadius: '20px',
-      padding: '20px'
+      padding: '20px',
+      boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)'
+    };
+    const ButtonStyle = {
+      backgroundColor: 'rgba(255,215,0,0.9)',
+      border: 'none',
+      height: '20px',
+      color: 'rgb(255,255,255)',
+      borderRadius: '20px',
+      boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)',
+      margin: '10px'
     };
     let Visible = null;
     if (this.props.accessGranted) {
@@ -112,7 +122,7 @@ class KegList extends React.Component{
             onEditKeg={this.handleEditKeg}
             key={index}/>
         )}
-        <button>Add Keg</button>
+        <button style={ButtonStyle}>Add Keg</button>
       </div>;
     } else {
       Visible = <Denied />;

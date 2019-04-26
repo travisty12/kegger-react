@@ -19,7 +19,8 @@ function Landing(props){
     borderRadius: '20px',
     padding: '20px',
     marginBottom:'30px',
-    fontSize: '0.75rem'
+    fontSize: '0.75rem',
+    boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)'
   };
   return (
     <div style={LandingStyle}>
