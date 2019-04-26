@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import spitoon from '../assets/images/salty-spitoon.png';
 import Keg from './Keg';
-import EditKeg from './EditKeg';
 import Denied from './Denied';
 
 class KegList extends React.Component{
@@ -52,7 +50,7 @@ class KegList extends React.Component{
           volume: 124
         }
       ]
-    }
+    };
     this.handleEditKeg = this.handleEditKeg.bind(this);
     this.handleSellPint = this.handleSellPint.bind(this);
     this.handleFillKeg = this.handleFillKeg.bind(this);
@@ -65,7 +63,6 @@ class KegList extends React.Component{
   }
 
   handleSellPint(index) {
-    console.log("in");
     const newState={...this.state}.kegList;
     newState[index].volume -= 1;
     this.setState({kegList: newState});
@@ -110,9 +107,9 @@ class KegList extends React.Component{
             key={index}/>
         )}
         <button>Add Keg</button>
-      </div>
+      </div>;
     } else {
-      Visible = <Denied />
+      Visible = <Denied />;
     }
     return (
       <div>
@@ -121,5 +118,10 @@ class KegList extends React.Component{
     );
   }
 }
+
+KegList.propTypes = {
+  loginEnabled: PropTypes.func.isRequired,
+  accessGranted: PropTypes.func.isRequired
+};
 
 export default KegList;

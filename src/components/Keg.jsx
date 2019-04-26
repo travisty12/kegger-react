@@ -8,7 +8,7 @@ class Keg extends React.Component {
     super(props);
     this.state = {
       editMode: false
-    }
+    };
     this.toggleEdit = this.toggleEdit.bind(this);
     this.sellPint = this.sellPint.bind(this);
     this.fillKeg = this.fillKeg.bind(this);
@@ -63,12 +63,6 @@ class Keg extends React.Component {
       fontSize: '2rem'
     };
     let KegView = null;
-    let _name = null;
-    let _brand = null;
-    let _price = null;
-    let _abv = null;
-    let _ibu = null;
-    let _volume = null;
     let EditOptions = null;
     if (this.state.editMode) {
       EditOptions = <div><button onClick={() => {this.sellPint}}>Sell 1 pint</button><button onClick={() => {this.fillKeg}}>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
@@ -77,7 +71,7 @@ class Keg extends React.Component {
         price={this.props.price}
         abv={this.props.abv}
         ibu={this.props.ibu}
-        volume={this.props.volume} index={this.props.index} onSubmitToggle={this.toggleEdit} onEditKeg={this.props.onEditKeg} /></div>
+        volume={this.props.volume} index={this.props.index} onSubmitToggle={this.toggleEdit} onEditKeg={this.props.onEditKeg} /></div>;
       // KegView = <div style={InfoStyle}><form onSubmit={this.submitNewKeg}><input placeholder={this.props.name} ref={(input) => {_name = input;}} /><input placeholder={this.props.brand + ' Brewery'} ref={(input) => {_brand = input;}} /><input placeholder={'$' + this.props.price + ' / pint'} ref={(input) => {_price = input;}} /><input placeholder={this.props.abv + '% abv'} ref={(input) => {_abv = input;}} /><input placeholder={this.props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} /><input placeholder={this.props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} /><button type='submit'>Submit</button></form></div>
 
     } else {
@@ -109,6 +103,8 @@ Keg.propTypes = {
   abv: PropTypes.number.isRequired,
   ibu: PropTypes.number.isRequired,
   volume: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
+  loginEnabled: PropTypes.bool.isRequired,
   onSellPint: PropTypes.func.isRequired,
   onFillKeg: PropTypes.func.isRequired,
   onEditKeg: PropTypes.func.isRequired,

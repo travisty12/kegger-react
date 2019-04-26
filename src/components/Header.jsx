@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './Nav';
 import Login from './Login';
+import PropTypes from 'prop-types';
 import logo from '../assets/images/Logo.png';
 
 function Header(props){
@@ -15,10 +16,10 @@ function Header(props){
     color: 'white',
     position: 'fixed',
     top: '0'
-  }
+  };
   const LogoStyle = {
     height: '80px'
-  }
+  };
   return (
     <div style={HeaderStyle}>
       <Nav />
@@ -27,5 +28,9 @@ function Header(props){
     </div>
   );
 }
+
+Header.propTypes = {
+  onLogin: PropTypes.func.isRequired
+};
 
 export default Header;

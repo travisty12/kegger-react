@@ -5,7 +5,7 @@ function Info(){
   const InfoStyle = {
     textDecoration: 'none',
     color: 'black'
-  }
+  };
 
   return (
     <div>

@@ -42,6 +42,8 @@ EditKeg.propTypes = {
   abv: PropTypes.number.isRequired,
   ibu: PropTypes.number.isRequired,
   volume: PropTypes.number.isRequired,
-}
+  index: PropTypes.number.isRequired,
+  onSubmitToggle: PropTypes.func.isRequired
+};
 
 export default EditKeg;

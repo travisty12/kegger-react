@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function Login(props){
@@ -7,11 +8,11 @@ function Login(props){
     textDecoration: 'none',
     color: 'white',
     cursor: 'pointer'
-  }
+  };
 
   let LoginShown = null;
   if (location.hash == '#/kegs') {
-    LoginShown = <h1 style={LoginStyle} onClick={props.onLogin}>Edit</h1>
+    LoginShown = <h1 style={LoginStyle} onClick={props.onLogin}>Edit</h1>;
   } else {
     LoginShown = <h1><Link to='/' style={LoginStyle}>Enter</Link></h1>;
   }
@@ -22,5 +23,9 @@ function Login(props){
     </div>
   );
 }
+
+Login.propTypes = {
+  onLogin: PropTypes.func.isRequired
+};
 
 export default Login;

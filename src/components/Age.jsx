@@ -11,13 +11,13 @@ function Age(props){
   return (
     <div>
       <h1>Kegger Taproom is for adults only. Are you 21 or over?</h1>
-      <h1><Link to='/denied' style={AgeStyle}>No</Link>  |  <Link to='/kegs' onClick={props.onAccess} style={AgeStyle}>Yes</Link></h1>
+      <h1><Link to='/denied' style={AgeStyle}>No</Link>  |  <Link to='/kegs' onClick={props.onGiveAccess} style={AgeStyle}>Yes</Link></h1>
     </div>
   );
 }
 
 Age.propTypes = {
-  onAccess: PropTypes.func.isRequired
+  onGiveAccess: PropTypes.func.isRequired
 };
 
 export default Age;

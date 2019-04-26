@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function Footer(){
 
@@ -20,13 +19,12 @@ function Footer(){
   const AnchorStyle = {
     textDecoration: 'none',
     color: 'white',
-  }
+  };
 
   const CopyrightStyle = {
     fontSize: '1rem',
     color: 'white'
-
-  }
+  };
 
   return (
     <div style={FooterStyle}>

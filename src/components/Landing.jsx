@@ -24,13 +24,13 @@ function Landing(props){
   return (
     <div style={LandingStyle}>
       <Info />
-      <Age onAccess={props.onAccess} />
+      <Age onGiveAccess={props.onAccess} />
     </div>
   );
 }
 
 Age.propTypes = {
   onAccess: PropTypes.func.isRequired
-}
+};
 
 export default Landing;
