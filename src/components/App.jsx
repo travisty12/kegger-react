@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Landing from './Landing';
 import KegList from './KegList';
 import Denied from './Denied';
-import bg from '../assets/images/Sand-bg.svg';
+import bg from '../assets/images/tile-bg.png';
 
 class App extends React.Component {
   constructor() {
@@ -36,7 +36,10 @@ class App extends React.Component {
   render() {
     const GlobalStyle = {
       backgroundImage: 'url(' + bg + ')',
-      height: 'calc(100vh - 160px)'
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
     };
     return (
       <div style={GlobalStyle}>

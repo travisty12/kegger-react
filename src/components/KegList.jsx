@@ -64,12 +64,18 @@ class KegList extends React.Component{
 
   render() {
     const KegListStyle = {
-      width: '100%',
+      width: '95vw',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       marginTop: '100px',
-      marginBottom: '60px'
+      marginBottom: '60px',
+      height: '100%',
+      maxWidth: '600px',
+      backgroundColor: 'rgba(0,0,0,0.3)',
+      border: '2px solid gold',
+      borderRadius: '20px',
+      padding: '20px'
     };
     console.log(this.props.accessGranted);
     let Visible = null;
