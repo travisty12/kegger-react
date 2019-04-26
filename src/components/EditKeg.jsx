@@ -24,20 +24,33 @@ function EditKeg(props){
   const InputStyle = {
     backgroundColor: 'rgb(50,50,50)',
     border: 'none',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    width: '100px',
+    height: '25px'
+  }
+  const ButtonStyle = {
+
+  }
+  const FormStyle = {
+    width: '250px',
+    height: '100%',
+    display: 'flex',
+    flexFlow: 'wrap row',
+    justifyContent: 'space-around',
+    alignItems: 'space-around'
   }
 
 
 
   return (
-    <form onSubmit={submitNewKeg}>
+    <form style={FormStyle} onSubmit={submitNewKeg}>
       <input style={InputStyle} placeholder={props.name} ref={(input) => {_name = input;}} />
       <input style={InputStyle} placeholder={props.brand + ' Brewery'} ref={(input) => {_brand = input;}} />
       <input style={InputStyle} placeholder={'$' + props.price + ' / pint'} ref={(input) => {_price = input;}} />
       <input style={InputStyle} placeholder={props.abv + '% abv'} ref={(input) => {_abv = input;}} />
       <input style={InputStyle} placeholder={props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} />
       <input style={InputStyle} placeholder={props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} />
-      <button type='submit'>Submit</button>
+      <button style={ButtonStyle} type='submit'>Submit</button>
     </form>
   );
 }
