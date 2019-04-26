@@ -10,9 +10,9 @@ import bg from '../assets/images/Sand-bg.svg';
 
 function App(){
   const GlobalStyle = {
-    backgroundImage: "url(" + bg + ")",
-    // backgroundSize: "cover",
-    height: "100%"
+    backgroundImage: 'url(' + bg + ')',
+    // backgroundSize: 'cover',
+    height: '100%'
   };
   return (
     <div style={GlobalStyle}>

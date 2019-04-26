@@ -60,12 +60,12 @@ class KegList extends React.Component{
 
   render() {
     const KegListStyle = {
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      marginTop: "100px",
-      marginBottom: "60px"
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginTop: '100px',
+      marginBottom: '60px'
     }
     return (
       <div style={KegListStyle}>

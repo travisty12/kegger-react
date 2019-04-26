@@ -4,12 +4,12 @@ import Age from './Age';
 
 function Landing(){
   const LandingStyle = {
-    height: "calc(100vh - 160px)",
-    marginTop: "100px",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around"
+    height: 'calc(100vh - 160px)',
+    marginTop: '100px',
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around'
 
   }
   return (
