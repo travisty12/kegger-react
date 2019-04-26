@@ -29,7 +29,7 @@ function Landing(props){
   );
 }
 
-Age.propTypes = {
+Landing.propTypes = {
   onAccess: PropTypes.func.isRequired
 };
 

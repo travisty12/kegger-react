@@ -65,7 +65,7 @@ class Keg extends React.Component {
     let KegView = null;
     let EditOptions = null;
     if (this.state.editMode) {
-      EditOptions = <div><button onClick={() => {this.sellPint}}>Sell 1 pint</button><button onClick={() => {this.fillKeg}}>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
+      EditOptions = <div><button onClick={this.sellPint}>Sell 1 pint</button><button onClick={this.fillKeg}>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
       KegView = <div style={InfoStyle}><EditKeg name={this.props.name}
         brand={this.props.brand}
         price={this.props.price}

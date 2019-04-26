@@ -120,8 +120,8 @@ class KegList extends React.Component{
 }
 
 KegList.propTypes = {
-  loginEnabled: PropTypes.func.isRequired,
-  accessGranted: PropTypes.func.isRequired
+  loginEnabled: PropTypes.bool.isRequired,
+  accessGranted: PropTypes.bool.isRequired
 };
 
 export default KegList;
