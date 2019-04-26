@@ -7,7 +7,7 @@ function Age(props){
   const AgeStyle = {
     textDecoration: 'none',
     color: 'yellow'
-  }
+  };
   return (
     <div>
       <h1>Kegger Taproom is for adults only. Are you 21 or over?</h1>
@@ -16,5 +16,8 @@ function Age(props){
   );
 }
 
+Age.propTypes = {
+  onAccess: PropTypes.func.isRequired
+};
 
 export default Age;

@@ -14,13 +14,13 @@ class App extends React.Component {
     this.state = {
       loginEnabled: false,
       accessGranted: false
-    }
+    };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleAccess = this.handleAccess.bind(this);
   }
 
   handleLogin() {
-    if(location.hash == "#/kegs") {
+    if(location.hash == '#/kegs') {
       const newState = {...this.state};
       newState.loginEnabled = !this.state.loginEnabled;
       this.setState({loginEnabled: newState.loginEnabled});
@@ -31,7 +31,6 @@ class App extends React.Component {
     const newState = {...this.state};
     newState.accessGranted = true;
     this.setState({accessGranted: newState.accessGranted});
-    console.log(this.state);
   }
 
   render() {
@@ -43,7 +42,7 @@ class App extends React.Component {
       <div style={GlobalStyle}>
         <Header onLogin={this.handleLogin} />
         <Switch>
-          <Route exact path='/' render={() => <Landing onaccess={this.handleAccess} />} />
+          <Route exact path='/' render={() => <Landing onAccess={this.handleAccess} />} />
           <Route path='/kegs' render={() => <KegList accessGranted={this.state.accessGranted} loginEnabled={this.state.loginEnabled} />} />
           <Route path='/denied' component={Denied} />
           <Route component={Error404} />

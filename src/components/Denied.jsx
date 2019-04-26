@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function Denied(){
@@ -10,11 +9,11 @@ function Denied(){
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center'
-  }
+  };
   const AnchorStyle = {
     textDecoration: 'none',
     color: 'blue'
-  }
+  };
   return (
     <div style={DeniedStyle}>
       <h1>Unfortunately, you cannot view this page.</h1>
