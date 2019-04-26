@@ -54,6 +54,10 @@ class KegList extends React.Component{
     }
   }
 
+  handleEditKeg() {
+
+  }
+
   render() {
     const KegListStyle = {
       width: "100%",
@@ -72,6 +76,7 @@ class KegList extends React.Component{
             abv={keg.abv}
             ibu={keg.ibu}
             volume={keg.volume}
+            onEditKeg={this.handleEditKeg}
             key={index}/>
         )}
       </div>
