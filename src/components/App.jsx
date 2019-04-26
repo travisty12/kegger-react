@@ -18,9 +18,11 @@ class App extends React.Component {
   }
 
   handleLogin() {
-    const newState = {...this.state};
-    newState.loginEnabled = !this.state.loginEnabled;
-    this.setState({loginEnabled: newState.loginEnabled});
+    if(location.hash == "#/kegs") {
+      const newState = {...this.state};
+      newState.loginEnabled = !this.state.loginEnabled;
+      this.setState({loginEnabled: newState.loginEnabled});
+    }
   }
 
   render() {

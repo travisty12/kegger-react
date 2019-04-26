@@ -9,9 +9,16 @@ function Login(props){
     cursor: 'pointer'
   }
 
+  let LoginShown = null;
+  if (location.hash == '#/kegs') {
+    LoginShown = <h1 style={LoginStyle} onClick={props.onLogin}>Edit</h1>
+  } else {
+    LoginShown = null;
+  }
+
   return (
     <div>
-      <h1 style={LoginStyle} onClick={props.onLogin}>Login</h1>
+      {LoginShown}
     </div>
   );
 }
