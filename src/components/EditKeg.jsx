@@ -21,14 +21,22 @@ function EditKeg(props){
     props.onSubmitToggle();
   }
 
+  const InputStyle = {
+    backgroundColor: 'rgb(50,50,50)',
+    border: 'none',
+    borderRadius: '10px'
+  }
+
+
+
   return (
     <form onSubmit={submitNewKeg}>
-      <input placeholder={props.name} ref={(input) => {_name = input;}} />
-      <input placeholder={props.brand + ' Brewery'} ref={(input) => {_brand = input;}} />
-      <input placeholder={'$' + props.price + ' / pint'} ref={(input) => {_price = input;}} />
-      <input placeholder={props.abv + '% abv'} ref={(input) => {_abv = input;}} />
-      <input placeholder={props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} />
-      <input placeholder={props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} />
+      <input style={InputStyle} placeholder={props.name} ref={(input) => {_name = input;}} />
+      <input style={InputStyle} placeholder={props.brand + ' Brewery'} ref={(input) => {_brand = input;}} />
+      <input style={InputStyle} placeholder={'$' + props.price + ' / pint'} ref={(input) => {_price = input;}} />
+      <input style={InputStyle} placeholder={props.abv + '% abv'} ref={(input) => {_abv = input;}} />
+      <input style={InputStyle} placeholder={props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} />
+      <input style={InputStyle} placeholder={props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} />
       <button type='submit'>Submit</button>
     </form>
   );
