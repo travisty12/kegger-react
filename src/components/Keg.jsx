@@ -68,21 +68,34 @@ class Keg extends React.Component {
       color: 'rgba(15,15,15,1)',
       fontSize: '2rem'
     };
+    const ButtonStyle = {
+      backgroundColor: 'rgba(255,215,0,0.9)',
+      border: 'none',
+      height: '20px',
+      color: 'rgb(255,255,255)',
+      borderRadius: '20px',
+      boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)',
+      margin: '10px'
+    };
+    const ButtonDiv = {
+      display: 'flex',
+      flexFlow: 'wrap column'
+    };
     let KegView = null;
     let EditOptions = null;
     if (this.state.editMode) {
-      EditOptions = <div><button onClick={this.sellPint}>Sell 1 pint</button><button onClick={this.fillKeg}>Refill keg</button><button onClick={this.toggleEdit}>Close edit mode</button></div>;
+      EditOptions = <div style={ButtonDiv}><button style={ButtonStyle} onClick={this.sellPint}>Sell 1 pint</button><button style={ButtonStyle} onClick={this.fillKeg}>Refill keg</button><button style={ButtonStyle} onClick={this.toggleEdit}>Close edit mode</button></div>;
       KegView = <div style={InfoStyle}><EditKeg name={this.props.name}
         brand={this.props.brand}
         price={this.props.price}
         abv={this.props.abv}
         ibu={this.props.ibu}
         volume={this.props.volume} index={this.props.index} onSubmitToggle={this.toggleEdit} onEditKeg={this.props.onEditKeg} /></div>;
-      // KegView = <div style={InfoStyle}><form onSubmit={this.submitNewKeg}><input placeholder={this.props.name} ref={(input) => {_name = input;}} /><input placeholder={this.props.brand + ' Brewery'} ref={(input) => {_brand = input;}} /><input placeholder={'$' + this.props.price + ' / pint'} ref={(input) => {_price = input;}} /><input placeholder={this.props.abv + '% abv'} ref={(input) => {_abv = input;}} /><input placeholder={this.props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} /><input placeholder={this.props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} /><button type='submit'>Submit</button></form></div>
+      // KegView = <div style={InfoStyle}><form onSubmit={this.submitNewKeg}><input placeholder={this.props.name} ref={(input) => {_name = input;}} /><input placeholder={this.props.brand + ' Brewery'} ref={(input) => {_brand = input;}} /><input placeholder={'$' + this.props.price + ' / pint'} ref={(input) => {_price = input;}} /><input placeholder={this.props.abv + '% abv'} ref={(input) => {_abv = input;}} /><input placeholder={this.props.ibu + ' IBUs'} ref={(input) => {_ibu = input;}} /><input placeholder={this.props.volume + ' pints remaining'} ref={(input) => {_volume = input;}} /><button style={ButtonStyle} type='submit'>Submit</button></form></div>
 
     } else {
       if (this.props.loginEnabled) {
-        EditOptions = <div><button onClick={this.toggleEdit}>Open edit mode</button></div>;
+        EditOptions = <div><button style={ButtonStyle} onClick={this.toggleEdit}>Open edit mode</button></div>;
       } else {
         EditOptions = null;
       }

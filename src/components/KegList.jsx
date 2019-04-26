@@ -58,7 +58,13 @@ class KegList extends React.Component{
 
   handleEditKeg(index, newKeg) {
     const newState = {...this.state}.kegList;
-    newState[index] = newKeg;
+    for (let key in newKeg) {
+      if (newKeg[key]) {
+        console.log(newKeg[key]);
+        newState[index][key] = newKeg[key];
+      }
+
+    }
     this.setState({kegList: newState});
   }
 

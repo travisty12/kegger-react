@@ -29,7 +29,12 @@ function EditKeg(props){
     height: '25px'
   }
   const ButtonStyle = {
-
+    backgroundColor: 'rgba(255,215,0,0.9)',
+    border: 'none',
+    height: '25px',
+    color: 'rgb(255,255,255)',
+    borderRadius: '20px',
+    boxShadow: '1px 1px 10px 1px rgba(0,0,0,0.3)'
   }
   const FormStyle = {
     width: '250px',
